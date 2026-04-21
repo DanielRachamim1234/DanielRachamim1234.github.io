@@ -18,36 +18,36 @@ const projects = [
     tag: "Cloud Security · Python · AWS",
     description:
       "A security tool that scans AWS environments for misconfigurations, correlates findings, and turns them into clear, actionable risk reports.",
-    github: "https://github.com/your-username/cloud-posture-risk-correlator",
+    github: "https://github.com/DanielRachamim1234/cloud-posture-risk-correlator",
     demo: "#",
     highlights: ["AWS scanning", "Risk correlation", "Actionable reporting"],
   },
   {
-    title: "PlayCall",
+    title: "PlayIQ",
     tag: "React · Sports Tech · Product Thinking",
     description:
       "An interactive basketball whiteboard for building and presenting plays visually with movement paths, passes, and role-based interactions.",
-    github: "https://github.com/your-username/playcall",
+    github: "https://github.com/DanielRachamim1234/PlayIQ/tree/main",
     demo: "#",
     highlights: ["Interactive court UI", "Visual play design", "Coaching workflow"],
-  },
-  {
-    title: "AI Jury",
-    tag: "AI · UX · Decision Systems",
-    description:
-      "A concept-driven product exploring AI-assisted judicial decision-making with emphasis on fairness, transparency, and appeal flows.",
-    github: "https://github.com/your-username/ai-jury",
-    demo: "#",
-    highlights: ["Fairness UX", "Structured reasoning", "Decision flow"],
   },
   {
     title: "Online Store Project",
     tag: "Full Stack · React · Node.js",
     description:
-      "A complete e-commerce style project with frontend and backend logic, built as part of a full-stack internet technologies course.",
-    github: "https://github.com/your-username/fullstack-store",
+      "A complete e-commerce project with frontend and backend logic.",
+    github: "https://github.com/DanielRachamim1234/Sport-Shop",
     demo: "#",
-    highlights: ["Frontend + backend", "Real app flow", "Course project"],
+    highlights: ["Frontend + backend", "Real app flow"],
+  },
+  {
+    title: "Mobile Threat Intelligence Automation",
+    tag: "Python · MITRE ATT&CK · Threat Intel",
+    description:
+      "Automated pipeline that collects Android malware samples from MalwareBazaar, maps them to MITRE ATT&CK Mobile techniques, and generates PDF intelligence reports with visualizations.",
+    github: "https://github.com/DanielRachamim1234/mobile-threat-intel",
+    demo: "#",
+    highlights: ["MalwareBazaar API integration", "MITRE ATT&CK Mobile mapping", "Automated PDF reporting"],
   },
 ];
 
@@ -189,7 +189,7 @@ export default function App() {
             <div>
               <div style={{ fontWeight: 700, fontSize: 18 }}>Daniel R.</div>
               <div style={{ color: page.muted, marginTop: 4 }}>
-                Computer Science Student · Security Analyst · Builder
+                Computer Science Student · Cyber Threat Intelligence Analyst · Builder
               </div>
             </div>
 
@@ -232,15 +232,15 @@ export default function App() {
 
             <p style={{ color: page.muted, fontSize: 19, lineHeight: 1.8, maxWidth: 760, margin: 0 }}>
               I’m a Computer Science student with hands-on experience in cyber threat intelligence,
-              and I use projects to turn technical ideas into working products. My portfolio focuses
-              on real systems, thoughtful interfaces, and tools that solve actual problems.
+              and I build practical projects across software, security, and product thinking.
+              My goal is to create tools and experiences that are technically solid, useful, and clear.
             </p>
 
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 28 }}>
               <LinkButton href="#projects" primary>
                 See my work
               </LinkButton>
-              <LinkButton href="https://github.com/your-username">GitHub</LinkButton>
+              <LinkButton href="https://github.com/DanielRachamim1234">GitHub</LinkButton>
             </div>
           </div>
 
@@ -387,9 +387,9 @@ export default function App() {
             </p>
 
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 18 }}>
-              <LinkButton href="mailto:your-email@example.com">Email</LinkButton>
-              <LinkButton href="https://github.com/your-username">GitHub</LinkButton>
-              <LinkButton href="https://www.linkedin.com/in/your-linkedin">LinkedIn</LinkButton>
+              <LinkButton href="mailto:danielr123439@gmail.com">Email</LinkButton>
+              <LinkButton href="https://github.com/DanielRachamim1234">GitHub</LinkButton>
+              <LinkButton href="https://www.linkedin.com/in/daniel-rachamim/">LinkedIn</LinkButton>
             </div>
           </Card>
         </section>
