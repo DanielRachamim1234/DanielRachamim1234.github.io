@@ -19,7 +19,6 @@ const projects = [
     description:
       "A security tool that scans AWS environments for misconfigurations, correlates findings, and turns them into clear, actionable risk reports.",
     github: "https://github.com/DanielRachamim1234/cloud-posture-risk-correlator",
-    demo: "#",
     highlights: ["AWS scanning", "Risk correlation", "Actionable reporting"],
   },
   {
@@ -28,7 +27,6 @@ const projects = [
     description:
       "An interactive basketball whiteboard for building and presenting plays visually with movement paths, passes, and role-based interactions.",
     github: "https://github.com/DanielRachamim1234/PlayIQ/tree/main",
-    demo: "#",
     highlights: ["Interactive court UI", "Visual play design", "Coaching workflow"],
   },
   {
@@ -37,7 +35,6 @@ const projects = [
     description:
       "A complete e-commerce project with frontend and backend logic.",
     github: "https://github.com/DanielRachamim1234/Sport-Shop",
-    demo: "#",
     highlights: ["Frontend + backend", "Real app flow"],
   },
   {
@@ -46,7 +43,6 @@ const projects = [
     description:
       "Automated pipeline that collects Android malware samples from MalwareBazaar, maps them to MITRE ATT&CK Mobile techniques, and generates PDF intelligence reports with visualizations.",
     github: "https://github.com/DanielRachamim1234/mobile-threat-intel",
-    demo: "#",
     highlights: ["MalwareBazaar API integration", "MITRE ATT&CK Mobile mapping", "Automated PDF reporting"],
   },
 ];
@@ -131,11 +127,13 @@ function Card({ children, style = {} }) {
 }
 
 function LinkButton({ href, children, primary = false }) {
+  const isExternal = typeof href === "string" && href.startsWith("http");
+
   return (
     <a
       href={href}
-      target={href.startsWith("http") ? "_blank" : undefined}
-      rel={href.startsWith("http") ? "noreferrer" : undefined}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noreferrer" : undefined}
       style={{
         display: "inline-block",
         padding: "12px 18px",
@@ -143,7 +141,9 @@ function LinkButton({ href, children, primary = false }) {
         textDecoration: "none",
         color: page.light,
         border: primary ? "none" : `1px solid ${page.border}`,
-        background: primary ? `linear-gradient(135deg, ${page.accent}, ${page.accent2})` : "transparent",
+        background: primary
+          ? `linear-gradient(135deg, ${page.accent}, ${page.accent2})`
+          : "transparent",
         fontWeight: 600,
       }}
     >
@@ -337,9 +337,11 @@ export default function App() {
 
                 <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 22 }}>
                   <LinkButton href={project.github}>GitHub</LinkButton>
-                  <LinkButton href={project.demo} primary>
-                    Live / Demo
-                  </LinkButton>
+                  {project.demo && (
+                    <LinkButton href={project.demo} primary>
+                      Live / Demo
+                    </LinkButton>
+                  )}
                 </div>
               </Card>
             ))}
@@ -382,8 +384,7 @@ export default function App() {
           <Card>
             <h3 style={{ marginTop: 0 }}>Let’s connect</h3>
             <p style={{ color: page.muted, lineHeight: 1.7 }}>
-              Replace these placeholders with your real GitHub, LinkedIn, email, resume link, and
-              optionally a live demo page.
+                Feel free to reach out by email, connect with me on LinkedIn, or explore more of my work on GitHub.
             </p>
 
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 18 }}>
