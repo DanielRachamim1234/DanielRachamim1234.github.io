@@ -49,6 +49,7 @@ const projects = [
 
 const skills = [
   "Python",
+  "Java",
   "JavaScript",
   "TypeScript",
   "React",
