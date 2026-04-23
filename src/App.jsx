@@ -139,7 +139,7 @@ function LinkButton({ href, children, primary = false }) {
         padding: "12px 18px",
         borderRadius: 12,
         textDecoration: "none",
-        color: page.light,
+        color: primary ? page.light : page.text,
         border: primary ? "none" : `1px solid ${page.border}`,
         background: primary
           ? `linear-gradient(135deg, ${page.accent}, ${page.accent2})`
@@ -227,7 +227,7 @@ export default function App() {
             </div>
 
             <h1 style={{ fontSize: 58, lineHeight: 1.05, margin: "0 0 18px 0" }}>
-              I build practical products at the intersection of software, security, and UX.
+              I build software with a security mindset
             </h1>
 
             <p style={{ color: page.muted, fontSize: 19, lineHeight: 1.8, maxWidth: 760, margin: 0 }}>
@@ -249,14 +249,14 @@ export default function App() {
               <Card style={{ padding: 18 }}>
                 <div style={{ color: page.muted, fontSize: 14, marginBottom: 8 }}>Current focus</div>
                 <div style={{ fontSize: 22, fontWeight: 700, lineHeight: 1.35 }}>
-                  Building a portfolio that looks serious to recruiters and hiring managers
+                  Software, security, and real-world problem solving
                 </div>
               </Card>
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                 <Card style={{ padding: 18 }}>
                   <div style={{ fontSize: 32, fontWeight: 800 }}>4+</div>
-                  <div style={{ color: page.muted, marginTop: 8 }}>Strong featured projects</div>
+                  <div style={{ color: page.muted, marginTop: 8 }}>Featured projects</div>
                 </Card>
                 <Card style={{ padding: 18 }}>
                   <div style={{ fontSize: 32, fontWeight: 800 }}>3</div>
@@ -270,14 +270,13 @@ export default function App() {
         <section id="about" style={{ marginBottom: 84 }}>
           <SectionTitle
             eyebrow="About"
-            title="A strong portfolio is a positioning tool, not just a gallery."
-            description="Your site should help someone understand you in under a minute: who you are, what kind of work you do, and which projects deserve attention first."
+            title="CTI Analyst with a security background and a builder mindset"
           />
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 18 }}>
             <Card>
               <h3 style={{ marginTop: 0 }}>Senior Cyber Threat Intelligence Analyst</h3>
-              <div style={{ color: page.muted, marginBottom: 14 }}>Cyberint / Check Point</div>
+              <div style={{ color: page.muted, marginBottom: 14 }}>Cyberint / Check Point Software Technologies</div>
               <p style={{ color: page.muted, lineHeight: 1.7, margin: 0 }}>
                 Investigating threats, analyzing attacker behavior, and working close to real-world
                 security workflows while thinking in a structured, evidence-based way.
@@ -297,8 +296,7 @@ export default function App() {
               <h3 style={{ marginTop: 0 }}>Builder Mindset</h3>
               <div style={{ color: page.muted, marginBottom: 14 }}>Projects that show range</div>
               <p style={{ color: page.muted, lineHeight: 1.7, margin: 0 }}>
-                Using projects to bridge analysis, engineering, UX, and product thinking rather than
-                staying boxed into one narrow role.
+                Using projects to bridge analysis, engineering, UX, and product thinking.
               </p>
             </Card>
           </div>
@@ -307,8 +305,8 @@ export default function App() {
         <section id="projects" style={{ marginBottom: 84 }}>
           <SectionTitle
             eyebrow="Projects"
-            title="Selected work"
-            description="Lead with projects that tell a clear story. The goal is not to dump every repo you have. The goal is to show judgment."
+            title="Featured projects"
+            description="The below projects reflect the areas I am most interested about: software development, security-oriented thinking, and building products that solve real problems."
           />
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
@@ -350,9 +348,7 @@ export default function App() {
 
         <section id="skills" style={{ marginBottom: 84 }}>
           <SectionTitle
-            eyebrow="Skills"
-            title="What I work with"
-            description="Keep this section clean. Recruiters scan it; engineers care more about whether your projects actually prove it."
+            title="Tools & Skills"
           />
 
           <Card>
@@ -376,19 +372,20 @@ export default function App() {
 
         <section id="contact">
           <SectionTitle
-            eyebrow="Contact"
-            title="Make it easy to reach you."
-            description="Do not bury contact details. The site exists to create opportunities, so reduce friction."
+            title="Contact Me"
           />
 
           <Card>
             <h3 style={{ marginTop: 0 }}>Let’s connect</h3>
-            <p style={{ color: page.muted, lineHeight: 1.7 }}>
-                Feel free to reach out by email, connect with me on LinkedIn, or explore more of my work on GitHub.
+            <p style={{ color: page.text, lineHeight: 1.7, marginBottom: 8 }}>
+              Feel free to reach out by email, connect with me on LinkedIn, or explore more of my work on GitHub.
+            </p>
+
+            <p style={{ color: page.text, lineHeight: 1.7, marginTop: 0 }}>
+              Email: danielr123439@gmail.com
             </p>
 
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 18 }}>
-              <LinkButton href="mailto:danielr123439@gmail.com">Email</LinkButton>
               <LinkButton href="https://github.com/DanielRachamim1234">GitHub</LinkButton>
               <LinkButton href="https://www.linkedin.com/in/daniel-rachamim/">LinkedIn</LinkButton>
             </div>
